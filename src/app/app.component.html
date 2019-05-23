@@ -1,0 +1,44 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu  side="start" type="overlay" >
+      <ion-content class="icontent" color="color3">
+        <div class="avtr"><img class="animated  fadeIn"src="../assets/imgs/floxsslogo.svg" alt=""></div>
+        <ion-list class="ilist" lines="none">
+          <ion-menu-toggle auto-hide="false">
+            <ion-item *ngIf="isAuthenticated " routerLinkActive="active" >
+              <ion-label>
+                <a class="menuLinks"routerLink="/home">Home</a>
+                <hr class="separator separator--line">
+              </ion-label>
+            </ion-item >
+            <ion-item *ngIf="isAuthenticated" routerLinkActive="active" >
+              <ion-label>
+                <a class="menuLinks"routerLink="/order">Order</a>
+                <hr class="separator separator--line">
+              </ion-label>
+            </ion-item >
+            <ion-item *ngIf="isAuthenticated " routerLinkActive="active" >
+              <ion-label>
+                <a class="menuLinks"routerLink="/store">Store</a>
+                <hr class="separator separator--line">
+              </ion-label>
+            </ion-item >
+            <ion-item *ngIf="!isAuthenticated " routerLinkActive="active">
+             <ion-label>
+               <a class="menuLinks"routerLink="/">Sign In</a>
+               <hr class="separator separator--line">
+            </ion-label> 
+            </ion-item >
+              <ion-item *ngIf="isAuthenticated" routerLinkActive="active" >
+              <ion-label>
+                <a class="menuLinks" (click)="onLogout()" style="cursor: pointer;">Logout</a>
+                <hr class="separator separator--line"></ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
+<app-update></app-update>

@@ -1,0 +1,25 @@
+<ion-footer class= "">
+  <div *ngIf="url===true">
+    <ion-fab edge ="true"vertical="top" horizontal="start" slot="fixed">
+        <ion-fab-button (click)="getProduct(product)">
+          Order
+        </ion-fab-button>
+      </ion-fab>
+    </div>
+<div class="foota">
+  <ion-grid>
+        <ion-row>
+        <ion-col >
+        <div class="location" *ngIf="url===false">
+            <app-location-ui></app-location-ui>
+         </div>
+      </ion-col>
+      <div class="basket" (click)="goToBasket()">
+       <span>
+          <p>{{basketCount}} </p>
+          </span>
+      </div>
+      </ion-row>
+  </ion-grid>     
+ </div>
+</ion-footer>

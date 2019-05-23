@@ -1,0 +1,69 @@
+<ion-content padding>
+  <ion-menu-button></ion-menu-button>
+  <div class="loader animated pulse" *ngIf="loader ===true">
+    <img src="../../../assets/imgs/floxss-loader.svg" alt="">
+  </div>
+
+  <div *ngIf="loader ===false">
+    <div class="orderMobile fadeinUp ">
+      <img src="../../../assets/imgs/store2.svg" alt="">
+    </div>
+    <div class=" map animated zoomIn">
+      <agm-map (mapReady)="mapReady($event)" #agmMap *ngIf="loader ===false" [latitude]="lat" [longitude]="lng"
+        [zoom]="zoom" [gestureHandling]="gestureHandling" [usePanning]="true">
+        <agm-marker *ngFor="let location of locations"
+          [iconUrl]="{ url: location.locationId != this.selectedLocationId ? '../../../assets/imgs/mapdot.svg':'../../../assets/imgs/mapdotFloxss.svg'}"
+          [latitude]="location.lat" [longitude]="location.lng" (markerClick)="markerClicked(location)"></agm-marker>
+        <agm-marker [iconUrl]="'../../../assets/imgs/youMarker.svg'" [latitude]="currentLat" [longitude]="currentLng">
+        </agm-marker>
+      </agm-map>
+    </div>
+    <div *ngIf="location === undefined">
+      <ion-card class=" startCard  fadeinUp">
+        <ion-card-header>
+          <ion-card-subtitle>Select Your Store</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-fab edge="true" vertical="center" horizontal="end" slot="fixed">
+            <ion-icon class="animated bounce infinite" size="large" name="arrow-up"></ion-icon>
+          </ion-fab>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  <div *ngIf="location !== undefined">
+    <ion-card class="animated fadeIn">
+      <ion-card-header>
+        <ion-card-subtitle>Select This Location</ion-card-subtitle>
+        <ion-card-title>{{location.name}} Store</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div *ngIf="distance === undefined">
+          <p>Distance: Loading...</p>
+        </div>
+        <div *ngIf="duration === undefined">
+          <p>
+            <ion-icon name="car"></ion-icon><span> Loading...</span>
+          </p>
+        </div>
+
+        <div *ngIf="distance !== undefined">
+          <p>Distance: {{distance}}</p>
+        </div>
+        <div *ngIf="duration !== undefined">
+          <p>
+            <ion-icon name="car"></ion-icon><span> {{duration}}</span>
+          </p>
+        </div>
+        <ion-fab edge="true" vertical="center" horizontal="end" slot="fixed">
+          <ion-fab-button (click)="getLocation(location)">
+            Select
+          </ion-fab-button>
+        </ion-fab>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

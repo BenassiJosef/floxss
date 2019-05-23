@@ -1,0 +1,125 @@
+<div class="row" *ngIf="didFail">
+  <div >
+    <div class="alert alert-danger">Something went wrong, please try again!</div>
+  </div>
+</div>
+<ion-content>
+<div *ngIf="!didPass" class="limiter  animated  fadeIn">
+    <ion-menu-button></ion-menu-button>
+    <div class="container-login100 animated  fadeIn">
+      <div class="wrap-login100 animated  fadeIn">
+        <form class="login100-form validate-form " (ngSubmit)="onSubmit()" #usrForm="ngForm">
+          <span class="login100-form-title">
+            Sign up
+            <hr class="separator separator--line">
+          </span>
+          <div class="passwordText">
+          <p >Password must include 8 characters or more.</p>
+        </div>
+          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+              <input class="input100" type="text"
+              id="username"
+              name="username"
+              ngModel
+              required 
+              placeholder="Username">
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <ion-icon name="md-person" aria-hidden="true"></ion-icon>
+              </span>
+            </div>
+          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+            <input class="input100" type="email"
+            id="email"
+            name="email"
+            ngModel
+            required
+            email
+            placeholder="Email">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <ion-icon name="mail" aria-hidden="true"></ion-icon>
+            </span>
+          </div>
+  
+          <div class="wrap-input100 validate-input" data-validate = "Password is required">
+            <input class="input100"  placeholder="Password" type="password"
+            id="password"
+            name="password"
+            ngModel
+            required>
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <ion-icon name="lock" aria-hidden="true"></ion-icon>
+            </span>
+          </div>
+
+          <div class="wrap-input100 validate-input" data-validate = "Password is required">
+              <input class="input100"  placeholder=" Confirm Password"  type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              ngModel
+              required>
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <ion-icon name="lock" aria-hidden="true"></ion-icon>
+              </span>
+            </div>
+          <div *ngIf="usrForm.value.password !== usrForm.value.confirmPassword">Passwords do not match!</div>
+          <div class="container-login100-form-btn">
+            <button class="login100-form-btn" type="submit"
+            [disabled]="(usrForm.value.password !== usrForm.value.confirmPassword) || usrForm.invalid">
+              Sign Up
+            </button>
+          </div>
+        </form>
+    </div>
+   </div>
+  </div>
+
+
+
+ <div *ngIf="didPass" class="limiter animated  fadeIn">  
+    <div class="container-login100 animated  fadeIn">
+      <div class="wrap-login100 animated  fadeIn">
+        <form class="login100-form validate-form " #confirmForm="ngForm" (ngSubmit)="onConfirm(confirmForm.value)" >
+          <span class="login100-form-title">
+           Confirm
+            <hr class="separator separator--line">
+          </span>
+          <p class="check">Please Check spam folder for confirmation Email.</p>
+  <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+      <input class="input100" type="text"
+          id="usrName"
+          name="usrName"
+          ngModel
+          required
+      placeholder="Username">
+      <span class="focus-input100"></span>
+      <span class="symbol-input100">
+        <ion-icon name="md-person" aria-hidden="true"></ion-icon>
+      </span>
+    </div>
+  <div class="wrap-input100 validate-input" data-validate = "Password is required">
+    <input class="input100"  placeholder="Validation Code"  type="text"
+          id="validationCode"
+          name="validationCode"
+          ngModel
+          required>
+    <span class="focus-input100"></span>
+    <span class="symbol-input100">
+      <ion-icon name="lock" aria-hidden="true"></ion-icon>
+    </span>
+  </div>
+  <div *ngIf="usrForm.value.password !== usrForm.value.confirmPassword">Passwords do not match!</div>
+  <div class="container-login100-form-btn">
+    <button class="login100-form-btn" type="submit" [disabled]="confirmForm.invalid">
+     Confirm
+    </button>
+  </div>
+</form>
+</div>
+</div>
+</div>
+  <div class="loader" *ngIf="isLoading"></div>
+ </ion-content> 

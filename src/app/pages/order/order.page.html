@@ -1,0 +1,76 @@
+<ion-content padding>
+  <ion-menu-button></ion-menu-button>
+  <div class="orderMobile fadeinUp ">
+    <img src="../../../assets/imgs/odersvg.svg" alt="" />
+  </div>
+  <div padding>
+    <ion-segment color="warning" [(ngModel)]="order">
+      <ion-segment-button value="products">
+        Our Products
+      </ion-segment-button>
+      <ion-segment-button value="previous" (click)="getOrders()">
+        Previous Orders
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="order">
+    <ion-list *ngSwitchCase="'products'">
+      <div class=" orderMobile loader animated pulse" *ngIf="loader1 === true">
+        <img src="../../../assets/imgs/floxss-loader.svg" alt="" />
+      </div>
+      <div *ngIf="loader1 === false">
+        <ion-item
+          class="animated zoomIn "
+          lines="none"
+          *ngFor="let product of products"
+          routerLink="/product/{{ product.productId }}"
+        >
+          <img class="thumbnail" src="{{ product.img }}" alt="" />
+        </ion-item>
+      </div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'previous'">
+      <div class="loader animated pulse" *ngIf="loader2 === true">
+        <img src="../../../assets/imgs/noPrevious.svg" alt="" />
+      </div>
+      <div *ngIf="loader2 === false">
+        <div *ngFor="let ord of orders">
+          <mat-accordion>
+            <mat-expansion-panel
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  #Order ID
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{ ord.OrderId }}
+                </mat-panel-description>
+                <mat-panel-description>
+                  {{ ord.Date }}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <mat-tab-group>
+                <mat-tab label="Order Items">
+                  <div *ngFor="let o of ord.Orders">
+                    <p>{{ o.name }} - £{{ o.price }}</p>
+                  </div>
+                </mat-tab>
+                <mat-tab label="Order Time">
+                  <p>{{ ord.Time }}</p>
+                </mat-tab>
+                <mat-tab label="Order Location">
+                  <p>{{ ord.LocationName }}</p>
+                </mat-tab>
+              </mat-tab-group>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>
+<app-order-footer [url]="false"></app-order-footer>

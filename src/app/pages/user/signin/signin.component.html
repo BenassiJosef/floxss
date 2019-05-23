@@ -1,0 +1,69 @@
+<!-- <ion-header no-border>
+  <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-menu-button autoHide="true"></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="" >
+<div class=" limiter animated  fadeIn">  
+    <ion-menu-button ></ion-menu-button>
+      <!-- <div class="avtr"><img class="animated  fadeIn"src="../assets/imgs/floxsslogo.svg" alt=""></div> -->
+  <div class="container-login100 animated  fadeIn">
+    <div class="wrap-login100 animated  fadeIn">
+      <form class="login100-form validate-form " (ngSubmit)="onSubmit()" #usrForm="ngForm">
+        <span class="login100-form-title">
+          Sign in
+           <hr class="separator separator--line">
+        </span>
+       
+        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+          <input class="input100" type="text"
+          id="username"
+          name="username"
+          ngModel
+          required 
+          placeholder="Email">
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <ion-icon name="md-person" aria-hidden="true"></ion-icon>
+          </span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Password is required">
+          <input class="input100"  placeholder="Password" type="password"
+          id="password"
+          name="password"
+          ngModel
+          required>
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <ion-icon name="lock" aria-hidden="true"></ion-icon>
+          </span>
+        </div>
+        
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn" type="submit" [disabled]="usrForm.invalid">
+            Login
+          </button>
+        </div>
+
+        <div class="signup p-t-20">
+          <a (click)="goToSignUp()" class="txt2">
+            Sign Up
+          </a>
+        </div>
+        <div class="signup p-t-20">
+            <a (click)="goToConfirm()" class="txt2">
+              I just need to confirm email?
+            </a>
+          </div>
+      </form>
+  </div>
+ </div>
+</div>
+</ion-content>
+
+
+

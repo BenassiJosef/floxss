@@ -1,0 +1,57 @@
+<ion-header transparent no-border>
+  <ion-buttons class="animated fadeinUp  delay-1s">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+</ion-header>
+<ion-content padding>
+  <div class="orderMobile  fadeinUp ">
+    <img src="../../../assets/imgs/basketImg.svg" alt="" />
+  </div>
+  <div *ngIf="basket.length == 0" class=" orderMobile loader animated pulse">
+    <img src="../../../assets/imgs/noItems.svg" alt="" />
+  </div>
+
+  <div *ngIf="basket.length != 0">
+    <ion-card class=" total zoomIn">
+      <ion-card-header>
+        <ion-card-subtitle class="totalSub">
+          Your Total: £{{ total }}
+        </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <div *ngFor="let b of basket">
+      <ion-card class="  fadeinUp ">
+        <img src="{{ b.img }}" alt="" />
+        <ion-card-header>
+          <ion-card-subtitle
+            >{{ b.name }}
+            <span>
+              <ion-fab
+                edge="true"
+                vertical="bottom"
+                horizontal="start"
+                slot="fixed"
+                (click)="presentAlertConfirm(b)"
+              >
+                <ion-fab-button class="remove">
+                  Remove
+                </ion-fab-button>
+              </ion-fab>
+            </span></ion-card-subtitle
+          >
+        </ion-card-header>
+      </ion-card>
+    </div>
+  </div>
+  <ion-fab
+    vertical="bottom"
+    horizontal="end"
+    edge
+    slot="fixed"
+    (click)="presentModal(price)"
+  >
+    <ion-fab-button class="pay">
+      Pay
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

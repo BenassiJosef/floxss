@@ -1,0 +1,46 @@
+{
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/*.css",
+          "/*.js"
+        ]
+      }
+    }, {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [{
+    "name": "api-performance",
+    "urls": [
+      "/",
+      "/home",
+      "/order",
+      "/product/:id",
+      "/store",
+      "https://s3.eu-west-2.amazonaws.com/floxss-dynamic-imgs/**",
+      "https://gc3th7yyvj.execute-api.eu-west-2.amazonaws.com/dev/floxss/product/**",
+      "https://gc3th7yyvj.execute-api.eu-west-2.amazonaws.com/dev/floxss/getorders"
+
+    ],
+    "cacheConfig": {
+      "maxSize": 100,
+      "maxAge": "1d",
+      "strategy": "performance"
+    }
+  }]
+}

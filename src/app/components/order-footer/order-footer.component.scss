@@ -1,0 +1,91 @@
+
+
+.fadeinUp {
+    -webkit-animation: fadeInUp 500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 500ms ease-in-out;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+/* Standard syntax */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.whole{
+    animation-delay: 500ms;
+}
+.foota{
+
+    width:100%;
+    
+    background-color:  rgb(25, 52, 78);
+  }
+
+      
+
+  .location{
+    margin-top:2%;
+    margin-left:5%;
+    color: white;
+    font-family: Raleway-light;
+  }
+
+
+  .basket{
+    
+    width: 60px;
+    height:60px;
+    background-image: url('../../../assets/imgs/floxssBasket.svg');
+    background-repeat: no-repeat !important;
+    color:  rgb(25, 52, 78);
+    font-family: Raleway-light;
+    margin-top:10px;
+ }
+
+ span{
+ 
+    font-size: 18px;
+    width:50%;
+ }
+
+ span >p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-40%);
+    left: 35%;
+ }
+
+ ion-col{
+     padding-top:10px;
+ }
+
+
+ion-fab-button{
+    --color: white!important;  
+    font-family: Raleway-Light;
+    width: 80px;
+    height: 80px;
+    float:right;
+    --background: rgb(32, 69, 104);
+   
+}
+
+
+

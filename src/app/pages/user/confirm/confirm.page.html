@@ -1,0 +1,47 @@
+
+<ion-content padding>
+    <div class="limiter animated  fadeIn">  
+        <ion-menu-button></ion-menu-button>
+        <div class="container-login100 animated  fadeIn">
+          <div class="wrap-login100 animated  fadeIn">
+            <form class="login100-form validate-form " #confirmForm="ngForm" (ngSubmit)="onConfirm(confirmForm.value)" >
+              <span class="login100-form-title">
+               Confirm
+                <hr class="separator separator--line">
+              </span>
+      <div class="check">
+      <p>Please Check spam folder for confirmation Email.</p>
+    </div>
+      <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+          <input class="input100" type="text"
+              id="usrName"
+              name="usrName"
+              ngModel
+              required
+          placeholder="Username">
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <ion-icon name="md-person" aria-hidden="true"></ion-icon>
+          </span>
+        </div>
+      <div class="wrap-input100 validate-input" data-validate = "Password is required">
+        <input class="input100"  placeholder="Validation Code"  type="text"
+              id="validationCode"
+              name="validationCode"
+              ngModel
+              required>
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+          <ion-icon name="lock" aria-hidden="true"></ion-icon>
+        </span>
+      </div>
+      <div class="container-login100-form-btn">
+        <button class="login100-form-btn" type="submit" [disabled]="confirmForm.invalid">
+         Confirm
+        </button>
+      </div>
+    </form>
+    </div>
+    </div>
+    </div>
+</ion-content>

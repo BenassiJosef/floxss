@@ -1,0 +1,184 @@
+
+.top-cards {
+
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+ion-menu-button {
+  background-color: rgb(109, 155, 197);
+}
+
+.imgDesc {
+  font-family: Raleway-Light;
+  text-align: center;
+  color: grey;
+  font-size: 18px;
+}
+
+.homeMain {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 40vh;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.homeMain>img {
+  height: 100%;
+}
+
+.homeMobile {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 30vh;
+
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.homeMobile {
+  width: auto;
+
+}
+
+.pop {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  font-family: Raleway-Light;
+  color: white;
+
+
+}
+
+.wordsMobile {
+  height: 10vh;
+}
+
+.arrow {
+  height: 10vh;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.arrow>img {
+  height: 100%;
+}
+
+.ion-content {
+  height: 95vh;
+
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 990px) {
+  .top-cards {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 401px) {
+  .orderMobile>img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .orderMobile>img {
+    height: 155px;
+    width: 155px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .orderMobile>img {
+    height: 155px;
+    width: 155px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+
+.orderMobile {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 30vh;
+
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 991px) {
+
+  .orderMobile {
+   display: none;
+  }
+}
+
+.homeBtns{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  margin-left: 5%;
+  margin-right: 5%;
+ 
+
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ 
+
+}
+.homeBtn{
+  width:50%;
+  font-size: 10px;
+
+}
+
+
+
+
+

@@ -1,0 +1,31 @@
+<ion-header transparent no-border> 
+  <ion-buttons class="fadeIn">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+</ion-header>
+
+<ion-content class="" padding>
+  <div class="loader animated pulse"  *ngIf="loader ===true"></div>
+  <div *ngIf="loader ===false">
+  <div *ngFor="let p of product" >
+  <div class="container prodImg " >
+  <img src="{{p.img}}" alt="">
+  </div>
+  
+  <div class="container title ">
+  <h1>{{p.title}} </h1>
+ </div>
+ <div class="container price ">
+  <h2>Price: £{{p.displayPrice}} </h2>
+  </div>
+  <div class="container  desc">
+      <p>{{p.desc}} </p>
+      </div>
+</div>
+</div>
+</ion-content>
+<div *ngIf="product">
+  <div *ngFor="let p of product">
+    <app-order-footer [url]="true" [product]="p" [routeId]="routeId"></app-order-footer> 
+  </div>
+  </div>

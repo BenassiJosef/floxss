@@ -1,0 +1,330 @@
+
+// form.checkout{
+// width: 90%; ;
+// margin: 2rem auto;
+// text-align: center;
+// border: 2px solid #eee;
+// border-radius: 8px;
+
+// background: white;
+// font-family: monospace;
+// color: #525252;
+// font-size: 1.1rem;
+//   button{
+//   padding: 0.5rem 1rem;
+//   color: white;
+//   background: blue;
+//   border: none;
+//   border-radius: 4px;
+//   margin-top: 1rem;
+//   &:active{
+//     background: rgb(165, 76, 43);
+//   }
+//   }
+// }
+
+// button{
+// width: 50%;
+// display: block;
+
+// }
+
+// .StripeElement{
+
+// background-color: rgb(142, 192, 185);
+// padding: 8px 12px;
+// border-radius: 4px;
+// border: 1px solid transparent;
+// box-shadow: 0 1px 3px 0 #e6ebf1;
+// -webkit-transition: box-shadow 150ms ease;
+// transition: box-shadow 150ms ease;
+// width:100%;
+// }
+// .StripeElement--focus{
+// box-shadow: 0 1px 3px 0 #cfd7df;
+// }
+// .StripeElement--invalid{
+// border-color: #fa755a
+// }
+// .StripeElement--webkit-autofill{
+// background-color: #fefde5 !important
+// }
+
+
+.example.example3 {
+  background-color: #525f7f;
+  height:100vh;
+}
+
+.example.example3 * {
+  font-family: Quicksand, Open Sans, Segoe UI, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.example.example3 .fieldset {
+  margin: 0 15px 30px;
+  padding: 0;
+  border-style: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.example.example3 .field {
+  padding: 10px 20px 11px;
+  background-color: #7488aa;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.example.example3 .field.half-width {
+  width: calc(50% - (5px / 2));
+}
+
+.example.example3 .field.third-width {
+  width: calc(33% - (5px / 3));
+}
+
+.example.example3 .field + .field {
+  margin-top: 6px;
+}
+
+.example.example3 .field.focus,
+.example.example3 .field:focus {
+  color: #424770;
+  background-color: #f6f9fc;
+}
+
+.example.example3 .field.invalid {
+  background-color: #fa755a;
+}
+
+.example.example3 .field.invalid.focus {
+  background-color: #f6f9fc;
+}
+
+.example.example3 .field.focus::-webkit-input-placeholder,
+.example.example3 .field:focus::-webkit-input-placeholder {
+  color: #cfd7df;
+}
+
+.example.example3 .field.focus::-moz-placeholder,
+.example.example3 .field:focus::-moz-placeholder {
+  color: #cfd7df;
+}
+
+.example.example3 .field.focus:-ms-input-placeholder,
+.example.example3 .field:focus:-ms-input-placeholder {
+  color: #cfd7df;
+}
+
+.example.example3 input, .example.example3 button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border-style: none;
+}
+
+.example.example3 input {
+  color: #fff;
+}
+
+.example.example3 input::-webkit-input-placeholder {
+  color: #9bacc8;
+}
+
+.example.example3 input::-moz-placeholder {
+  color: #9bacc8;
+}
+
+.example.example3 input:-ms-input-placeholder {
+  color: #9bacc8;
+}
+
+.example.example3 .pay{
+  display: block;
+  width: calc(100% - 30px);
+  height: 40px;
+  margin: 0 15px;
+  background-color: #fcd669;
+  border-radius: 20px;
+  color: #525f7f;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+ 
+}
+
+.example.example3 .close {
+
+  font-size:45px !important;
+  color:#f5be58;
+ 
+}
+
+.example.example3 button:active {
+  background-color: #f5be58;
+}
+
+.example.example3 .error svg .base {
+  fill: #fa755a;
+}
+
+.example.example3 .error svg .glyph {
+  fill: #fff;
+}
+
+.example.example3 .error .message {
+  color: #fff;
+}
+
+.example.example3 .success .icon .border {
+  stroke: #fcd669;
+}
+
+.example.example3 .success .icon .checkmark {
+  stroke: #fff;
+}
+
+.example.example3 .success .title {
+  color: #fff;
+}
+
+.example.example3 .success .message {
+  color: #9cabc8;
+}
+
+.example.example3 .success .reset path {
+  fill: #fff;
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  .img{
+      height:100%;
+      width:100%;
+      border-radius: 0%;
+  }
+}
+
+@media screen and (min-width: 401px) {
+  img{
+      height:200px;
+      width:200px;
+      border-radius: 50%;
+      margin-left:10px;
+      margin-top:10px;
+
+  }
+
+
+  }
+ 
+.loaderDiv{
+  display: flex;
+  justify-content: center;  
+}
+
+.loader {
+  border: 16px solid #ffff;
+  border-radius: 50%;
+  border-top: 16px solid #fcd669;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  position: relative;;
+  z-index: 3;
+}
+
+@media screen and (min-width: 375px) {
+  .orderMobile>img {
+    height: 155px;
+    width: 155px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .loader {
+    border: 16px solid #ffff;
+    border-radius: 50%;
+    border-top: 16px solid #fcd669;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    position:fixed;
+    z-index: 3;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .orderMobile>img {
+    height: 155px;
+    width: 155px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .loader {
+    border: 16px solid #ffff;
+    border-radius: 50%;
+    border-top: 16px solid #fcd669;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    position:fixed;
+    z-index: 3;
+  }
+}
+
+.orderMobile {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 30vh;
+
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+
+}
+
+.cardDesc{
+ color:white;
+ display: -webkit-box;
+ display: -webkit-flex;
+ display: -moz-box;
+ display: -ms-flexbox;
+ margin-left:5%;
+ margin-right:5%;
+ width:auto;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+
+ font-size: 10px;
+}

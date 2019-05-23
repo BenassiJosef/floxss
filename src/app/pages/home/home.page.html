@@ -1,0 +1,53 @@
+<ion-content>
+  <div class="ion-content">
+    <ion-menu-button color="medium"></ion-menu-button>
+    <div class="top-cards">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="animated fadeIn" size="12" size-md>
+            <div>
+              <img src="../../../assets/imgs/orderFloxssCard.svg" alt="">
+            </div>
+            <div class="imgDesc">
+              <P>Order From The Businesses PWA</P>
+            </div>
+          </ion-col>
+          <ion-col class=" animated fadeIn delay-1s" size="12" size-md>
+            <div>
+              <img src="../../../assets/imgs/payFloxssCard.svg" alt="">
+            </div>
+            <div class="imgDesc">
+              <P>Pay From The Businesses PWA</P>
+            </div>
+          </ion-col>
+          <ion-col class=" animated fadeIn delay-2s" size="12" size-md>
+            <div>
+              <img src="../../../assets/imgs/collectFloxssCard.svg" alt="">
+            </div>
+            <div class="imgDesc">
+              <P>Collect From The Business</P>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="orderMobile">
+      <img src="../../../assets/imgs/floxsslogo.svg" alt="">
+    </div>
+    <div class="homeBtns" *ngIf ="android">
+    <ion-button class="homeBtn" (click)="askPermission()"expand="block"><ion-ripple-effect></ion-ripple-effect>Push Notifications</ion-button>
+    <ion-button class="homeBtn" (click)="confirmHomeAdd()"expand="block"><ion-ripple-effect></ion-ripple-effect>Android: Add To Device</ion-button>
+    </div>
+    <div class="homeBtns" *ngIf ="ios">
+      <ion-button class="homeBtn" (click)="installPwaIos()"expand="block"><ion-ripple-effect></ion-ripple-effect>IOS: Add To Device</ion-button>
+      </div>
+      <div class="homeBtns" *ngIf ="other">
+          <ion-button class="homeBtn" (click)="askPermission()"expand="block"><ion-ripple-effect></ion-ripple-effect>Push Notifications</ion-button>
+          </div>
+    <div class="homeMain">
+      <img src="../../../assets/imgs/homecard.svg" alt="">
+    </div>
+  </div>
+
+</ion-content>
