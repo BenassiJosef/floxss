@@ -10,8 +10,8 @@ import {IndexedDbService} from '../indexedDb/indexed-db.service' ;
 import {ToastController} from '@ionic/angular';
 
 const POOL_DATA = {
-  UserPoolId:'eu-west-2_7Smf29Uyj',
-  ClientId: '3kasng4m2pg10dtrpg1va2c7vu'
+  UserPoolId:'key here',
+  ClientId: 'key here'
 }
 
 const userPool = new CognitoUserPool(POOL_DATA);
