@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+rimport { Injectable } from '@angular/core';
 import {Router} from '@angular/router';
 
 
@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 export class PaymentService {
 
   elements:any;
-  stripe =  Stripe('pk_test_3s6zNLT19fUIpeMahBkFVYXu');
+  stripe =  Stripe('key here');
   constructor() {
     // this.elements = this.stripe.elements();public router:Router
   }
