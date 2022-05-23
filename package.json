@@ -37,7 +37,7 @@
     "amazon-cognito-identity-js": "^3.0.7",
     "animate.css": "^3.7.0",
     "core-js": "^2.5.4",
-    "dexie": "^2.0.4",
+    "dexie": "^3.2.2",
     "firebase": "^5.9.0",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.29"
